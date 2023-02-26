@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contador</title>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 48px;
+    }
+
+    .counter {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #count {
+      display: inline-block;
+      font-size: 62px;
+      margin: 0 10px;
+      width: 100px;
+      text-align: center;
+    }
+
+    .button-container {
+      display: inline-block;
+      margin: 0 25px;
+      vertical-align: middle;
+    }
+
+    .increment {
+      float: right;
+    }
+
+    .decrement {
+      float: left;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #464646;
+      color: #fff;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #555454;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="counter">
+    <div class="container">
+      <div class="button-container decrement">
+        <button onclick="decrement()">-</button>
+      </div>
+      <p id="count">0</p>
+      <div class="button-container increment">
+        <button onclick="increment()">+</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      document.getElementById('count').textContent = count;
+    }
+
+    function decrement() {
+      if (count > 0) {
+        count--;
+        document.getElementById('count').textContent = count;
+      }
+    }
+  </script>
+</body>
+
+</html>
